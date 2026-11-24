@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ingest-api
+
+server:
+  port: 8081
+
+aws:
+  region: ${AWS_REGION:ap-northeast-2}
+  sqs:
+    queue-url: ${SQS_QUEUE_URL}
+
+tcp:
+  ingest:
+    port: 9000
+    read-timeout-ms: 60000
+    max-packet-bytes: 65571
